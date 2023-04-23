@@ -20,7 +20,9 @@ export default function navbar() {
     "justify-between",
     "pt-10",
     "pb-5",
-    "px-24"
+    "px-24",
+    "w-full",
+    "fixed"
   );
 
   const header = document.createElement("h1");
@@ -34,8 +36,8 @@ export default function navbar() {
   const btnHome = btn("Home");
   btnContainer.appendChild(btnHome);
 
-  const btnAbout = btn("About");
-  btnContainer.appendChild(btnAbout);
+  const btnMenu = btn("Menu");
+  btnContainer.appendChild(btnMenu);
 
   const btnContact = btn("Contact");
   btnContainer.appendChild(btnContact);
