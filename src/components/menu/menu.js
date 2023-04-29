@@ -41,7 +41,7 @@ async function categories(categoriesContainer, dishesContainer) {
       htmlCategoryButton.classList.add("bg-slate-200", "border-slate-300");
 
       dishesContainer.innerHTML = "";
-      for (let dish of dishes.slice(-100)) {
+      for (let dish of dishes.slice(-10)) {
         const article = document.createElement("article");
         article.classList.add(
           "text-center",
