@@ -2,8 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        dish: "calc(100% - 7.5rem)",
+      },
+    },
   },
   plugins: [],
-}
-
+};
