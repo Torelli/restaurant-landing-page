@@ -41,6 +41,7 @@ export default function Homepage() {
     "transition-all"
   );
   btnMenu.innerText = "Explore our menu";
+  btnMenu.setAttribute("id", "home-btn-menu");
 
   heroContainer.appendChild(btnMenu);
 

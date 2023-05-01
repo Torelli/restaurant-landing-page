@@ -1,6 +1,7 @@
 function btn(title) {
   const btn = document.createElement("button");
   btn.classList.add(
+    "nav-btn",
     "font-semibold",
     "text-sm",
     "hover:border-b",
@@ -8,6 +9,7 @@ function btn(title) {
     "transition-all"
   );
   btn.innerHTML = title;
+  btn.setAttribute("id", `btn-${title}`);
 
   return btn;
 }
