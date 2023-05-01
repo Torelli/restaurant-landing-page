@@ -24,8 +24,10 @@ export default function navbar() {
     "pb-5",
     "px-24",
     "w-full",
-    "fixed"
+    "fixed",
+    "transition-all"
   );
+  container.setAttribute("id", "navbar");
 
   const header = document.createElement("h1");
   header.classList.add("text-2xl", "font-bold", "cursor-pointer");

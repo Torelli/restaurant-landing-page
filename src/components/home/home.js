@@ -18,13 +18,14 @@ export default function Homepage() {
   const heroContainer = document.createElement("div");
 
   const heading = document.createElement("h2");
-  heading.classList.add("text-6xl", "mb-4", "leading-tight");
+  heading.classList.add("text-6xl", "mb-4", "leading-tight", "animate-[side_1s_ease-in-out_forwards]");
   heading.innerHTML =
     'Spring in <span class="font-bold text-orange-300">WoodFood</span>';
 
   heroContainer.appendChild(heading);
 
   const copy = document.createElement("p");
+  copy.classList.add("animate-[side_1.3s_ease-in-out_forwards]", "delay-75");
   copy.innerText = "The most delicious outdoor food";
 
   heroContainer.appendChild(copy);
@@ -41,7 +42,8 @@ export default function Homepage() {
     "shadow-sm",
     "hover:shadow-2xl",
     "hover:border-slate-400",
-    "transition-all"
+    "transition-all",
+    "animate-[up_1s_ease-in-out_forwards]"
   );
   btnMenu.innerText = "Explore our menu";
   btnMenu.setAttribute("id", "home-btn-menu");
@@ -54,7 +56,7 @@ export default function Homepage() {
 
   const homeDish = new Image();
   homeDish.src = homeImg;
-  homeDish.classList.add("pointer-events-none");
+  homeDish.classList.add("pointer-events-none", "animate-[up_0.8s_ease-in-out_forwards]");
   imageContainer.appendChild(homeDish);
 
   container.appendChild(imageContainer);

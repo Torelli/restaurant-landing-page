@@ -119,6 +119,7 @@ export default function Menu() {
   for (let i = 0; i < 10; i++) {
     const article = document.createElement("article");
     article.classList.add(
+      "pb-6",
       "flex",
       "flex-col",
       "items-center",
@@ -132,7 +133,7 @@ export default function Menu() {
     );
 
     const img = document.createElement("div");
-    img.classList.add("w-full", "h-dish", "bg-slate-300");
+    img.classList.add("w-full", "h-4/5", "bg-slate-300");
     article.appendChild(img);
 
     const title = document.createElement("div");

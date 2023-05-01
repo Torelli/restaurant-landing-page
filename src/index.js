@@ -8,6 +8,19 @@ const content = document.querySelector("#content");
 content.appendChild(navbar());
 content.appendChild(Homepage());
 
+const nav = document.querySelector("#navbar");
+
+window.onscroll = function () {
+  if (
+    document.body.scrollTop >= 50 ||
+    document.documentElement.scrollTop >= 50
+  ) {
+    nav.classList.add("bg-white/90", "backdrop-blur-sm");
+  } else {
+    nav.classList.remove("bg-white/90", "backdrop-blur-sm");
+  }
+};
+
 const btnHome = document.querySelector("#btn-Home");
 btnHome.classList.add("border-b", "border-b-slate-400");
 
