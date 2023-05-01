@@ -6,7 +6,6 @@ async function categories(categoriesContainer, dishesContainer) {
     .then((categories) => categories.categories);
 
   for (let category of categories) {
-    let textColor = randomizeTextColors();
     const title = document.createElement("button");
     title.classList.add(
       "btn-category",
@@ -81,17 +80,6 @@ async function categories(categoriesContainer, dishesContainer) {
 
   const btnStarter = document.querySelector("#btn-Starter");
   btnStarter.click();
-}
-
-function randomizeTextColors() {
-  let odds = Math.floor(Math.random() * 4);
-  return odds === 0
-    ? "text-orange-600"
-    : odds === 1
-    ? "text-emerald-600"
-    : odds === 2
-    ? "text-sky-600"
-    : "text-rose-600";
 }
 
 export default function Menu() {
