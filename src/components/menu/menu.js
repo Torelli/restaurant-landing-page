@@ -71,7 +71,7 @@ async function categories(categoriesContainer, dishesContainer) {
           "text-sm",
           "italic"
         );
-        price.textContent = `25`;
+        price.textContent = (Math.ceil(Math.random() * 30) + 9.99).toFixed(2);
         article.appendChild(price);
         dishesContainer.appendChild(article);
       }
@@ -84,7 +84,8 @@ async function categories(categoriesContainer, dishesContainer) {
 
 export default function Menu() {
   const container = document.createElement("div");
-  container.classList.add("pt-24", "px-24");
+  container.classList.add("pt-24", "px-24", "transition-all", "duration-300");
+  container.setAttribute("id", "container");
 
   const title = document.createElement("h2");
   title.classList.add("text-lg", "font-bold");
@@ -114,6 +115,53 @@ export default function Menu() {
 
   container.appendChild(categoriesContainer);
   container.appendChild(dishesContainer);
+
+  for (let i = 0; i < 10; i++) {
+    const article = document.createElement("article");
+    article.classList.add(
+      "flex",
+      "flex-col",
+      "items-center",
+      "text-center",
+      "bg-white",
+      "border",
+      "border-slate-300",
+      "rounded-lg",
+      "shadow",
+      "animate-pulse"
+    );
+
+    const img = document.createElement("div");
+    img.classList.add("w-full", "h-dish", "bg-slate-300");
+    article.appendChild(img);
+
+    const title = document.createElement("div");
+    title.classList.add(
+      "h-4",
+      "w-3/4",
+      "mt-6",
+      "font-bold",
+      "line-clamp-1",
+      "bg-slate-300",
+      "rounded"
+    );
+    article.appendChild(title);
+
+    const price = document.createElement("div");
+    price.classList.add(
+      "h-4",
+      "w-6",
+      "before:not-italic",
+      "text-slate-500",
+      "mt-6",
+      "text-sm",
+      "italic",
+      "bg-slate-300",
+      "rounded"
+    );
+    article.appendChild(price);
+    dishesContainer.appendChild(article);
+  }
 
   return container;
 }

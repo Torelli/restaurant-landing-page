@@ -19,8 +19,12 @@ btnHomeMenu.addEventListener("click", () => {
   const buttons = document.querySelectorAll(".nav-btn");
   btnHome.classList.remove("border-b", "border-b-slate-400");
   btnMenu.classList.add("border-b", "border-b-slate-400");
-  content.removeChild(content.children[1]);
-  content.appendChild(Menu());
+  let container = document.querySelector("#container");
+  container.classList.add("-translate-x-1/2", "opacity-0");
+  setTimeout(() => {
+    content.removeChild(content.children[1]);
+    content.appendChild(Menu());
+  }, 300);
 });
 
 btnHome.addEventListener("click", (e) => {
@@ -29,13 +33,23 @@ btnHome.addEventListener("click", (e) => {
     button.classList.remove("border-b", "border-b-slate-400");
   }
   e.target.classList.add("border-b", "border-b-slate-400");
-  content.removeChild(content.children[1]);
+  let container = document.querySelector("#container");
+  container.classList.add("-translate-x-1/2", "opacity-0");
+  setTimeout(() => {
+    content.removeChild(content.children[1]);
+  }, 150);
   content.appendChild(Homepage());
 
   btnHomeMenu = document.querySelector("#home-btn-menu");
   btnHomeMenu.addEventListener("click", () => {
-    btnMenu.classList.add("border-b-slate-400");
-    content.removeChild(content.children[1]);
+    const buttons = document.querySelectorAll(".nav-btn");
+    btnHome.classList.remove("border-b", "border-b-slate-400");
+    btnMenu.classList.add("border-b", "border-b-slate-400");
+    let container = document.querySelector("#container");
+    container.classList.add("-translate-x-1/2", "opacity-0");
+    setTimeout(() => {
+      content.removeChild(content.children[1]);
+    }, 300);
     content.appendChild(Menu());
   });
 });
@@ -46,7 +60,10 @@ btnMenu.addEventListener("click", (e) => {
     button.classList.remove("border-b", "border-b-slate-400");
   }
   e.target.classList.add("border-b", "border-b-slate-400");
-  content.removeChild(content.children[1]);
+  container.classList.add("-translate-x-1/2", "opacity-0");
+  setTimeout(() => {
+    content.removeChild(content.children[1]);
+  }, 300);
   content.appendChild(Menu());
 });
 
@@ -56,6 +73,10 @@ btnContact.addEventListener("click", (e) => {
     button.classList.remove("border-b", "border-b-slate-400");
   }
   e.target.classList.add("border-b", "border-b-slate-400");
-  content.removeChild(content.children[1]);
+  let container = document.querySelector("#container");
+  container.classList.add("-translate-x-1/2", "opacity-0");
+  setTimeout(() => {
+    content.removeChild(content.children[1]);
+  }, 300);
   content.appendChild(Contact());
 });

@@ -1,6 +1,7 @@
 export default function Contact() {
   const container = document.createElement("div");
-  container.classList.add("pt-28", "px-80");
+  container.classList.add("pt-28", "px-80", "transition-all", "duration-300");
+  container.setAttribute("id", "container");
 
   const content = document.createElement("div");
   content.classList.add(
@@ -105,7 +106,7 @@ export default function Contact() {
   content.appendChild(fieldContainer);
 
   const location = document.createElement("div");
-  location.classList.add("w-1/2");
+  location.classList.add("w-1/2","bg-white");
   location.innerHTML = `<div style="width: 100%"><iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe></div>`;
 
   content.appendChild(location);

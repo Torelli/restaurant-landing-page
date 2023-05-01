@@ -9,8 +9,11 @@ export default function Homepage() {
     "pt-20",
     "pl-24",
     "h-screen",
-    "overflow-hidden"
+    "overflow-hidden",
+    "transition-all",
+    "duration-300"
   );
+  container.setAttribute("id", "container");
 
   const heroContainer = document.createElement("div");
 
